@@ -55,6 +55,14 @@ library
   ghc-options: -Wall
   hs-source-dirs: src
   exposed-modules: Data.Tagged
+  Default-Extensions:
+        PartialTypeConstructors
+        FlexibleContexts
+        -- Needed for PTC annotations
+        QuantifiedConstraints
+        TypeOperators
+        ExplicitNamespaces
+        UndecidableInstances
 
   if impl(ghc >= 9.0)
     -- these flags may abort compilation with GHC-8.10
